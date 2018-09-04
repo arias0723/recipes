@@ -14,6 +14,14 @@ import org.springframework.stereotype.Component;
 @Produces("application/json")
 public interface IngredientService {
 		
+	/**
+	 * Consulta todos los ingredientes usados por recetas en el sistema. Los ingredientes repetidos 
+	 * son agrupados por su nombre y se calcula la suma total de la cantidad de cada uno.
+	 *  
+	 * @param
+	 * @return Devuelve un objeto IngredientResponse que contiene una lista de las ingredientes.
+	 * @author Jose Arias
+	 */
 	@GET
 	@Path("/all")
 	public IngredientResponse getIngredients();
